@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+img {
+    transition: 0.3s ease;
+    max-width: 80%;
+}
+
+#wrapper {
+    background-color: #1a1a1a;
+    display: grid;
+    grid-template-rows: 60vh 40vh;
+}
+#score{
+    position: fixed;
+    display: grid;
+    width: 100%;
+    justify-items:center;
+    align-items: center;
+    font-size: 3em;
+    top: 5vh;
+    text-align: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 30px;
+}
+
+#client::after{
+    content: "You";
+    display: block;
+    font-size: 0.5em;
+    padding: 0 30px;
+}
+#computer::after{
+    content: "Computer";
+    display: block;
+    font-size: 0.5em;
+    padding: 0 30px;
+}
+
+#result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    background: #d9d9d9;
+
+}
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    color: #fff;
+    align-items: center;
+    justify-items: center;
+}
+#options>div{
+    text-align: center;
+    background: rgba(238, 238, 238, 0.33);
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+#options>div:hover {
+    background: rgba(238, 238, 238, 1);
+    transition: 0.3s ease;
+}
+
+#options img {
+    cursor: pointer;
+}
+
+#options img:hover {
+    -webkit-animation-name: bounce;
+    animation: bounce 1.5s infinite;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+
+}
+
+#battleResult {
+    padding: 20px 60px;
+    background: #1a1a1a;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px #414141;
+}
+
+#battleResult h3 {
+    font-size: 1.6em;
+    margin: 20px 0;
+}
+#win h3{
+    color: #ffd13a;
+}
+#lose h3{
+    color: #ff4c4c;
+}
+#draw h3{
+    color: #56ff63;
+}
+
+#playAgain {
+    margin: 20px 0;
+    background: #393939;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Keyframes*/
+
+@-webkit-keyframes bounce {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes bounce {
+
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}

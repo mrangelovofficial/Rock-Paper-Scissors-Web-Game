@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors | Mr.Angelov</title>
+    <link rel="stylesheet" href="resources/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://<?php echo $_SERVER['HTTP_HOST'].str_replace('.php','',$_SERVER['SCRIPT_NAME']); ?>" />
+    <meta name="robots" content="index, nofollow">
+    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Do you wanna play something when you are bored? This is the right type game for you. Rock Paper Scissors">
+    <meta name="keywords" content="game,play,fun,bored,rock,paper,scissors,mrangelov,mr.angelov,webdeveloper">
+    <meta property="og:title" content="Rock Paper Scissors |Web Developer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST'].str_replace('.php','',$_SERVER['SCRIPT_NAME']); ?>" />
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+      <noscript>Allow javascript or page will not working correctly</noscript>
+    <div id="wrapper">
+        <div id="score">
+            <div id="client">0</div>
+            <div></div>
+            <div id="computer">0</div>
+        </div>
+        <div id="result">
+        </div>
+        <div id="options">
+            <div id="stone"><img src="resources/images/stone.webp" alt=""></div>
+            <div id="scissors"><img src="resources/images/scissors.webp" alt=""></div>
+            <div id="paper"><img src="resources/images/paper.webp" alt=""></div>
+        </div>
+    </div>
+
+    <div id="battleResult">
+        <div class="boxBattle">
+            <h3>Here will be result of game</h3>
+            <img src="resources/images/win.webp" alt="Result of battle image">
+        </div>
+        <div id="playAgain">Play Again</div>
+    </div>
+    <script src="resources/js/app.js"></script>
+</body>
+
+</html>
